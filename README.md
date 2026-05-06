@@ -1,50 +1,89 @@
-# Welcome to your Expo app 👋
+# 🌦️ NusaWeather
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## 📱 Deskripsi Aplikasi
+NusaWeather adalah aplikasi mobile berbasis React Native (Expo) yang digunakan untuk:
+- Mengecek cuaca secara realtime berdasarkan nama kota
+- Menyimpan data (seperti kota favorit atau catatan) ke database
 
-## Get started
+Aplikasi ini dibuat sebagai tugas UTS Mobile Programming.
 
-1. Install dependencies
+---
 
-   ```bash
+## 🚀 Fitur Utama
+
+### 🔐 1. Authentication (Login & Register)
+Pengguna dapat:
+- Membuat akun baru (Register)
+- Login menggunakan email dan password
+- Logout dari aplikasi
+
+Fitur ini menggunakan Firebase Authentication.
+
+---
+
+### 🗂️ 2. CRUD Data (Firestore)
+Pengguna dapat mengelola data:
+- ➕ Create → menambahkan data baru
+- 📖 Read → melihat daftar data
+- ✏️ Update → mengedit data
+- ❌ Delete → menghapus data
+
+Data disimpan secara online menggunakan Cloud Firestore.
+
+---
+
+### 🌦️ 3. Cek Cuaca Realtime
+Pengguna dapat:
+- Memasukkan nama kota
+- Melihat informasi cuaca secara langsung seperti:
+  - Suhu
+  - Kondisi cuaca (cerah, hujan, dll)
+
+Data diambil dari OpenWeather API.
+
+---
+
+## 🛠️ Teknologi yang Digunakan
+- React Native (Expo)
+- Firebase Authentication
+- Cloud Firestore
+- OpenWeather API (REST API)
+
+---
+
+## 📲 Cara Menjalankan Aplikasi
+
+1. Clone repository:
+   git clone https://github.com/Dmardiana/NusaWeather.git
+
+2. Masuk ke folder project:
+   cd NusaWeather
+
+3. Install dependencies:
    npm install
-   ```
 
-2. Start the app
-
-   ```bash
+4. Jalankan aplikasi:
    npx expo start
-   ```
 
-In the output, you'll find options to open the app in a
+5. Scan QR menggunakan aplikasi Expo Go di HP
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🖼️ Screenshot Aplikasi
+Tambahkan screenshot di sini:
+- Halaman Login
+- Halaman Home
+- Fitur Cuaca
+- Fitur CRUD
 
-## Get a fresh project
+---
 
-When you're ready, run:
 
-```bash
-npm run reset-project
-```
+## 🎥 Video Demo
+Link video presentasi:
+(Tambahkan link Google Drive / YouTube)
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 👨‍💻 Author
+Dmardiana
