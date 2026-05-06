@@ -70,14 +70,27 @@ Data diambil dari OpenWeather API.
 ---
 
 ## 🖼️ Screenshot Aplikasi
-Tambahkan screenshot di sini:
-- Halaman Login
-- Halaman Home
-- Fitur Cuaca
-- Fitur CRUD
 
----
+### 🔐 Login
+![Login](assets/loginn.jpeg)
 
+### 🏠 Home / Map
+![Map](assets/mapp.jpeg)
+
+### 🌦️ Cek Cuaca
+![Cuaca](assets/cuacaa.jpeg)
+
+### 📊 Detail Cuaca
+![Detail Cuaca](assets/detailcuaca.jpeg)
+
+### 📊 Detail Cuaca 2
+![Detail Cuaca 2](assets/detailcuacaa.jpeg)
+
+### 🗂️ CRUD Data
+![CRUD](assets/crudd.jpeg)
+
+### ⚙️ Setting
+![Setting](assets/setting.jpeg)
 
 ## 🎥 Video Demo
 Link video presentasi:
