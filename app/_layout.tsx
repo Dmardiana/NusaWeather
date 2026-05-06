@@ -1,24 +1,36 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
+
+
+// ============================================================
+// NusaWeather — app/_layout.tsx (Root Layout)
+// ============================================================
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
-import 'react-native-reanimated';
+import React from 'react';
+import { LoadingSpinner } from '../src/components/common/LoadingSpinner';
+import { ThemeProvider, useTheme } from '../src/contexts/ThemeContext';
+import { UnitsProvider } from '../src/contexts/UnitsContext';
+import { useAuth } from '../src/hooks/useAuth';
 
-import { useColorScheme } from '@/hooks/use-color-scheme';
-
-export const unstable_settings = {
-  anchor: '(tabs)',
-};
-
-export default function RootLayout() {
-  const colorScheme = useColorScheme();
-
+function RootLayoutInner() {
+  const { isInitialized } = useAuth();
+  const { isDark } = useTheme();
+  if (!isInitialized) return <LoadingSpinner message="Memuat NusaWeather..." />;
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Modal' }} />
+    <>
+      <StatusBar style={isDark ? 'light' : 'dark'} />
+      <Stack screenOptions={{ headerShown: false, animation: 'fade' }}>
+        <Stack.Screen name="(auth)" />
+        <Stack.Screen name="(tabs)" />
       </Stack>
-      <StatusBar style="auto" />
+    </>
+  );
+}
+export default function RootLayout() {
+  return (
+    <ThemeProvider>
+      <UnitsProvider>
+        <RootLayoutInner />
+      </UnitsProvider>
     </ThemeProvider>
   );
 }
